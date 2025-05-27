@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+/* Reset básico para arrancar con buen pie */
+* {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
