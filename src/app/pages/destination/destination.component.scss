@@ -21,8 +21,8 @@ h5 {
 }
 
 span {
-    font-family: 'Barlow Condensed', sans-serif;
-
+    font-family: 'Bellefair', sans-serif;
+    letter-spacing: 1rem;
 }
 
 .hero {
@@ -33,7 +33,6 @@ span {
     padding: 0vh 15vh;
     color: white;
     text-align: center;
-    // gap: 5vh;
 
     @media (min-width: 768px) {
         flex-direction: row;
@@ -41,33 +40,14 @@ span {
         text-align: left;
     }
 
-    .hero-text {
-        max-width: 50ch;
-
-        h5 {
-            font-size: clamp(0.8rem, 1vw + 0.5rem, 1.2rem);
-            letter-spacing: 0.3em;
-            color: #ffffff;
-            margin-bottom: 1.5vh;
-            font-family: 'Barlow Condensed';
-            font-size: x-large;
-            font-weight: 400;
-        }
-
-        h1 {
-            font-size: clamp(3rem, 10vw, 8rem);
-            font-weight: 400;
-            font-family: 'Bellefair', serif;
-            margin: 0;
-        }
-
-        p {
-            font-size: clamp(1rem, 1.5vw, 1.2rem);
-            line-height: 1.6;
-            color: #d0d6f9;
-            margin-top: 2vh;
-            font-family: 'Barlow';
-        }
+    h5 {
+        font-size: clamp(0.8rem, 1vw + 0.5rem, 1.2rem);
+        letter-spacing: 0.3em;
+        color: #ffffff;
+        margin-bottom: 1.5vh;
+        font-family: 'Barlow Condensed';
+        font-size: x-large;
+        font-weight: 400;
     }
 }
 
@@ -87,4 +67,88 @@ span {
     color: #4f5259;
     margin-right: 0.5rem; // opcional, para separar del texto
     letter-spacing: 0.3em;
+}
+
+h1 {
+    font-size: clamp(3rem, 10vw, 8rem);
+    font-weight: 400;
+    font-family: 'Bellefair', serif;
+    margin: 0;
+}
+
+.planet-info {
+    max-width: 55ch;
+    text-align: left;
+
+    .planet-tabs {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 2rem;
+
+        span {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 0.2em;
+            color: #d0d6f9;
+            cursor: pointer;
+            padding-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .active {
+            color: white;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 3px;
+                width: 100%;
+                background-color: white;
+            }
+        }
+    }
+
+    h1 {
+        font-family: 'Bellefair', serif !important;
+        font-size: clamp(3rem, 10vw, 6rem);
+        margin: 0 0 1rem;
+        letter-spacing: 0.5rem;
+
+    }
+
+    p {
+        color: #d0d6f9;
+        line-height: 1.6;
+        font-family: 'Barlow', sans-serif;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .divider {
+        border: none;
+        border-top: 1px solid #383b4b;
+        margin-bottom: 2rem;
+    }
+
+    .planet-stats {
+        display: flex;
+        gap: 4rem;
+
+        h5 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.9rem;
+            color: #d0d6f9;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-family: 'Bellefair', serif;
+            font-size: 1.5rem;
+            color: white;
+            margin: 0;
+        }
+    }
 }
