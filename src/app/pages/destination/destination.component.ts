@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 })
 export class DestinationComponent {
 
-  rutaImagen = 'src/assets/destination/image-europa.png';
+  
 
 }

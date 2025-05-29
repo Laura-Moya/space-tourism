@@ -1,24 +1,39 @@
 .main {
-  background-image: url('../../../assets/destination/background-destination-desktop.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  position: relative;
-  overflow: hidden;
+    //   background-image: url('../../../assets/destination/background-destination-desktop.jpg');
+    background-image: url('../../../../public/assets/destination/background-destination-desktop.jpg');
+    // background-color: black; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+}
+
+h5 {
+    text-align: start;
+}
+
+.hero-explore div {
+    display: flex;
+    gap: 2rem;
+}
+
+span {
+    font-family: 'Barlow Condensed', sans-serif;
+
 }
 
 .hero {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    // min-height: 90vh;
-    padding: 5vh 15vh;
+    justify-content: start;
+    align-items: start;
+    padding: 0vh 15vh;
     color: white;
-    align-items: flex-end;
     text-align: center;
-    gap: 5vh;
+    // gap: 5vh;
 
     @media (min-width: 768px) {
         flex-direction: row;
@@ -32,9 +47,11 @@
         h5 {
             font-size: clamp(0.8rem, 1vw + 0.5rem, 1.2rem);
             letter-spacing: 0.3em;
-            color: #d0d6f9;
+            color: #ffffff;
             margin-bottom: 1.5vh;
             font-family: 'Barlow Condensed';
+            font-size: x-large;
+            font-weight: 400;
         }
 
         h1 {
@@ -52,29 +69,22 @@
             font-family: 'Barlow';
         }
     }
+}
 
-    .hero-explore {
-        margin-top: 5vh;
+.planet-image img {
+    width: 80%;
+}
 
-        @media (min-width: 768px) {
-            margin-top: 0;
-        }
+.planet-image {
+    display: flex;
+    justify-content: end;
+    margin-top: 3.5rem;
+}
 
-        button {
-            width: clamp(8rem, 25vw, 17rem);
-            aspect-ratio: 1 / 1;
-            border-radius: 50%;
-            border: none;
-            background-color: white;
-            font-size: clamp(1rem, 1.5vw, 1.5rem);
-            letter-spacing: 0.2em;
-            font-family: 'Bellefair', serif;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-
-            &:hover {
-                box-shadow: 0 0 0 3vw rgba(255, 255, 255, 0.1);
-            }
-        }
-    }
+.section-number {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: bold; // o 700
+    color: #4f5259;
+    margin-right: 0.5rem; // opcional, para separar del texto
+    letter-spacing: 0.3em;
 }
