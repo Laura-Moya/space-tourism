@@ -2,41 +2,41 @@
     <app-navbar></app-navbar>
 
     <section class="hero">
+        <!-- IZQUIERDA: Imagen del planeta -->
         <div class="hero-text">
-            <h5><span class="section-number">01</span> PICK YOUR DESTINATION</h5>
+            <h5>
+                <span class="section-number">01</span> PICK YOUR DESTINATION
+            </h5>
             <div class="planet-image">
-                <img src="assets/destination/image-moon.png" alt="Europa">
+                <img [src]="selectedPlanet.image" [alt]="selectedPlanet.name" />
             </div>
-
         </div>
+
+        <!-- DERECHA: Info del planeta -->
         <div class="planet-info">
             <div class="planet-tabs">
-                <span class="active">MOON</span>
-                <span>MARS</span>
-                <span>EUROPA</span>
-                <span>TITAN</span>
+                <span *ngFor="let planet of planets" [class.active]="planet.name === selectedPlanet.name"
+                    (click)="selectPlanet(planet)">
+                    {{ planet.name.toUpperCase() }}
+                </span>
             </div>
 
-            <h1>MOON</h1>
-            <p>
-                See our planet as you've never seen it before. A perfect relaxing trip away to help regain perspective
-                and come back refreshed. While you're there, take in some history by visiting the Luna 2 and Apollo 11
-                landing sites.
-            </p>
+            <h1>{{ selectedPlanet.name.toUpperCase() }}</h1>
+
+            <p>{{ selectedPlanet.description }}</p>
 
             <hr class="divider" />
 
             <div class="planet-stats">
                 <div>
                     <h5>AVG. DISTANCE</h5>
-                    <p>384,400 KM</p>
+                    <p>{{ selectedPlanet.distance }}</p>
                 </div>
                 <div>
                     <h5>EST. TRAVEL TIME</h5>
-                    <p>3 DAYS</p>
+                    <p>{{ selectedPlanet.travelTime }}</p>
                 </div>
             </div>
         </div>
-
     </section>
 </main>
