@@ -1,0 +1,24 @@
+<main class="main">
+    <app-navbar></app-navbar>
+
+    <section class="hero">
+        <!-- IZQUIERDA: Imagen del planeta -->
+        <div class="hero-text">
+            <h5><span class="section-number">02</span> MEET YOUR CREW</h5>
+            <p class="position">{{ selectedCrew.position.toUpperCase() }}</p>
+            <p class="name">{{ selectedCrew.name.toUpperCase() }}</p>
+            <p class="background">{{ selectedCrew.description }}</p>
+            <!-- Puntitos 👇 -->
+            <div class="planet-tabs">
+                <span *ngFor="let member of crewMembers" (click)="selectCrew(member)"
+                    [ngClass]="{ 'active': member === selectedCrew }">
+                </span>
+            </div>
+        </div>
+
+        <!-- DERECHA: Info del planeta -->
+        <div class="crew-photo">
+            <img [src]="selectedCrew.image" [alt]="selectedCrew.name">
+        </div>
+    </section>
+</main>
