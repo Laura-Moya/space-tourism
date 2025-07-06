@@ -227,17 +227,25 @@ h5 {
 }
 
 .circle {
-  width: 100px;
-  height: 100px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  color: black;
-  font-family: "Bellefair";
-  font-weight: normal;
-  user-select: none;
-  margin-bottom: 2.5rem;
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: black;
+    font-family: "Bellefair";
+    font-weight: normal;
+    user-select: none;
+    margin-bottom: 2.5rem;
+    cursor: pointer;
+}
+
+.circle.active {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: auto;
 }
