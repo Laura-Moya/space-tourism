@@ -181,20 +181,26 @@ h5 {
 }
 
 .launch-photo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  height: 100vh;
-  overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    // height: 100vh;
+    overflow: hidden;
 }
 
 .launch-photo img {
-  max-height: 100%;
-  max-width: 100%;
-  height: auto;
-  width: auto;
-  object-fit: contain;
+    max-height: 100%;
+    max-width: 80vh;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+}
+
+.launch-text {
+    flex: 1;
+    padding: 4rem;
+    color: white;
 }
 
 
@@ -218,4 +224,20 @@ h5 {
             background-color: white;
         }
     }
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: black;
+  font-family: "Bellefair";
+  font-weight: normal;
+  user-select: none;
+  margin-bottom: 2.5rem;
 }

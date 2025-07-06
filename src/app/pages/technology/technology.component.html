@@ -2,7 +2,12 @@
     <app-navbar></app-navbar>
 
     <section class="hero">
-        <!-- IZQUIERDA: Imagen del planeta -->
+        <div>
+            <div class="circle">1</div>
+            <div class="circle">2</div>
+            <div class="circle">3</div>
+        </div>
+
         <div class="hero-text">
             <h5><span class="section-number">03</span> SPACE LAUNCH 01</h5>
             <p class="section-number2">THE TERMINOLOGY...</p>
@@ -17,8 +22,10 @@
         </div>
 
         <!-- DERECHA: Info del planeta -->
-        <div class="launch-photo">
-            <img [src]="selectedStep.image" [alt]="selectedStep.name">
+        <div class="launch-container">
+            <div class="launch-photo">
+                <img src="assets/technology/image-launch-vehicle-portrait.jpg" alt="Rocket" />
+            </div>
         </div>
     </section>
 </main>
