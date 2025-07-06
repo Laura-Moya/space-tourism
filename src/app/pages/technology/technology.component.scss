@@ -1,0 +1,221 @@
+.main {
+    background-image: url('../../../../public/assets/crew/background-crew-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+h5 {
+    text-align: start;
+}
+
+.hero-explore div {
+    display: flex;
+    gap: 2rem;
+}
+
+span {
+    font-family: 'Bellefair', sans-serif;
+    letter-spacing: 1rem;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 0 0 0 25vh;
+    gap: 4rem;
+    color: white;
+    text-align: center;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: start;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+
+    h5 {
+        font-size: clamp(0.8rem, 1vw + 0.5rem, 1.2rem);
+        letter-spacing: 0.3em;
+        color: #ffffff;
+        margin-bottom: 1.5vh;
+        font-family: 'Barlow Condensed';
+        font-size: x-large;
+        font-weight: 400;
+    }
+}
+
+.section-number {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: bold; // o 700
+    color: #4f5259;
+    margin-right: 0.5rem; // opcional, para separar del texto
+    letter-spacing: 0.3em;
+}
+
+.section-number2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 500;
+    color: #d0d6fa;
+    margin-right: 0.5rem;
+    letter-spacing: 0.3em;
+}
+
+h1 {
+    font-size: clamp(3rem, 10vw, 8rem);
+    font-weight: 400;
+    font-family: 'Bellefair', serif;
+    margin: 0;
+}
+
+.planet-info {
+    max-width: 55ch;
+    text-align: left;
+
+    .planet-tabs {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 2rem;
+
+        span {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 0.2em;
+            color: #d0d6f9;
+            cursor: pointer;
+            padding-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .active {
+            color: white;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 3px;
+                width: 100%;
+                background-color: white;
+            }
+        }
+    }
+
+    h1 {
+        font-family: 'Bellefair', serif !important;
+        font-size: clamp(3rem, 10vw, 6rem);
+        margin: 0 0 1rem;
+        letter-spacing: 0.5rem;
+
+    }
+
+    p {
+        color: #d0d6f9;
+        line-height: 1.6;
+        font-family: 'Barlow', sans-serif;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .divider {
+        border: none;
+        border-top: 1px solid #383b4b;
+        margin-bottom: 2rem;
+    }
+
+    .planet-stats {
+        display: flex;
+        gap: 4rem;
+
+
+        p {
+            font-family: 'Bellefair', serif;
+            font-size: 1.5rem;
+            color: white;
+            margin: 0;
+        }
+    }
+}
+
+p {
+    margin: 0;
+}
+
+.position {
+    font-size: 26px;
+    font-family: 'Bellefair';
+    color: #8f9095;
+}
+
+.name {
+    font-size: 56px;
+    font-family: 'Bellefair';
+}
+
+
+h5 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    color: #d0d6f9;
+    letter-spacing: 0.15em;
+    margin-bottom: 3.5rem !important;
+}
+
+.background {
+    font-family: 'Barlow';
+    color: #D0D6F9;
+    width: 85%;
+    line-height: 2rem;
+    font-size: 1.1rem;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.launch-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.launch-photo img {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+}
+
+
+.planet-tabs {
+    display: flex;
+    gap: 1.7rem;
+    justify-content: center;
+    margin-top: 4rem;
+    justify-content: flex-start;
+
+    span {
+        display: inline-block;
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 50%;
+        background-color: #4f5259;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &.active {
+            background-color: white;
+        }
+    }
+}

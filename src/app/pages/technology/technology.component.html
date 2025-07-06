@@ -1,0 +1,24 @@
+<main class="main">
+    <app-navbar></app-navbar>
+
+    <section class="hero">
+        <!-- IZQUIERDA: Imagen del planeta -->
+        <div class="hero-text">
+            <h5><span class="section-number">03</span> SPACE LAUNCH 01</h5>
+            <p class="section-number2">THE TERMINOLOGY...</p>
+            <p class="name">{{ selectedStep.name.toUpperCase() }}</p>
+            <p class="background">{{ selectedStep.description }}</p>
+            <!-- Puntitos 👇 -->
+            <!-- <div class="planet-tabs">
+                <span *ngFor="let member of launches" (click)="selectStep(member)"
+                    [ngClass]="{ 'active': member === selectedStep }">
+                </span>
+            </div> -->
+        </div>
+
+        <!-- DERECHA: Info del planeta -->
+        <div class="launch-photo">
+            <img [src]="selectedStep.image" [alt]="selectedStep.name">
+        </div>
+    </section>
+</main>

@@ -7,12 +7,13 @@ import { HomeComponent } from './pages/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DestinationComponent } from './pages/destination/destination.component';
 import { CrewComponent } from './pages/crew/crew.component';
-// importa los demás componentes que usas en rutas
+import { TechnologyComponent } from './pages/technology/technology.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'destination', component: DestinationComponent, pathMatch: 'full' },
   { path: 'crew', component: CrewComponent, pathMatch: 'full' },
+  { path: 'technology', component: TechnologyComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -21,12 +22,12 @@ const routes: Routes = [
     HomeComponent,
     NavbarComponent,
     DestinationComponent,
-    CrewComponent
-    // otros componentes
+    CrewComponent, 
+    TechnologyComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),  // ¡Muy importante!
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
